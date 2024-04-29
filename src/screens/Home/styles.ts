@@ -25,7 +25,7 @@ export const UserPhoto = styled.Image`
 export const CardResult = styled.View`
 
 `
-export const CardResultLabelIcon = styled.Icon`
+export const CardResultLabelIcon = styled.Image`
 
 `
 export const CardResultTotalPercent = styled.Text`
