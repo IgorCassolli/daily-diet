@@ -5,7 +5,6 @@ import {
     Logo,
     UserPhoto,
     CardResult,
-    TextLabel,
     CardResultLabelIcon,
     CardResultTotalPercent,
     CardResultLabel
@@ -26,7 +25,6 @@ export default function Home() {
                 <CardResultTotalPercent></CardResultTotalPercent>
                 <CardResultLabel></CardResultLabel>
             </CardResult>
-            <TextLabel></TextLabel>
         </Container>
     )
 }
