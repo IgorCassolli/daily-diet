@@ -2,6 +2,7 @@ import { ActivityIndicator } from 'react-native';
 import { ThemeProvider } from 'styled-components';
 
 import Home from './src/screens/Home';
+import NewMeat from './src/screens/NewMeat';
 
 import {
   useFonts,
@@ -20,7 +21,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      {fontsLoaded ? <Home /> : <ActivityIndicator />}
+      {fontsLoaded ? <NewMeat /> : <ActivityIndicator style={{ flex: 1 }} />}
     </ThemeProvider>
   )
 

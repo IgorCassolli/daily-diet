@@ -5,10 +5,15 @@ import {
     Logo,
     UserPhoto,
     CardResult,
-    CardResultLabelIcon,
+    CardResultIcon,
     CardResultTotalPercent,
-    CardResultLabel
+    CardResultText,
+    Meats,
+    NewMeat,
+    NewMeatTitle
 } from "./styles";
+
+import Button from "../../components/Button";
 import LogoImg from "../../assets/logo.png";
 
 export default function Home() {
@@ -21,10 +26,21 @@ export default function Home() {
                 />
             </Header>
             <CardResult>
-                <CardResultLabelIcon></CardResultLabelIcon>
-                <CardResultTotalPercent></CardResultTotalPercent>
-                <CardResultLabel></CardResultLabel>
+                <CardResultIcon />
+                <CardResultTotalPercent>90,86%</CardResultTotalPercent>
+                <CardResultText>das refeições dentro da dieta</CardResultText>
             </CardResult>
+            <Meats>
+                <NewMeat>
+                    <NewMeatTitle>Refeições</NewMeatTitle>
+                    <Button
+                        title="Nova refeição"
+                        type="DEFAULT"
+                        icon="plus"
+                    />
+                </NewMeat>
+
+            </Meats>
         </Container>
     )
 }
