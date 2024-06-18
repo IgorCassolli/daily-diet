@@ -1,31 +1,24 @@
+import { TextInputProps } from 'react-native';
 import {
-    ContainerBox,
     Container,
-    Label,
     Button,
     Status,
     ButtonText
 } from './styles';
 
-type Props = {
+type Props = TextInputProps & {
     label: string;
-    bg: 'green' | 'red';
+    bg: 'GREEN' | 'RED';
     isSelected: boolean;
 }
 
-export default function Select({ label, bg, isSelected }: Props) {
+export default function Select({ label, bg, isSelected, ...rest }: Props) {
     return (
-        <ContainerBox>
-            <Label>
-                {label}
-            </Label>
-            <Container>
-                <Button>
-                    <Status bg={bg} isSelected={isSelected} />
-                    <ButtonText>Sim</ButtonText>
-                </Button>
-            </Container>
-        </ContainerBox>
-
+        <Container isSelected={isSelected} bg={bg} >
+            <Button {...rest}>
+                <Status bg={bg} />
+                <ButtonText>{label}</ButtonText>
+            </Button>
+        </Container>
     )
 }

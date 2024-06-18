@@ -21,5 +21,12 @@ export default {
     FONT_FAMILY: {
         REGULAR: 'Nunito_400Regular',
         BOLD: 'Nunito_700Bold'
-    }
+    },
+    FONT_SIZE: {
+        SM: "14px",
+        MD: "16px",
+        LG: "18px",
+        XL: "24px",
+        XXL: "32px",
+    },
 }

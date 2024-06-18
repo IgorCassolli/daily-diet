@@ -1,26 +1,35 @@
 import { TextInput } from "react-native";
-import styled from "styled-components/native";
+import styled, { css } from "styled-components/native";
 
+type Props = {
+    height: string;
+}
 
 export const ContainerBox = styled.View`
     flex-direction: column;
 `
 
 export const Label = styled.Text`
-    font-size: 14px;
-    color: ${({ theme }) => theme.COLORS.GRAY_2};
-    font-family: ${({theme}) => theme.FONT_FAMILY.REGULAR}; 
+    ${({theme}) => css`
+        font-size: ${theme.FONT_SIZE.SM};
+        color: ${theme.COLORS.GRAY_2};
+        font-family: ${theme.FONT_FAMILY.BOLD};
+    `};
     margin-bottom: 4px;
 `
 
-export const Container = styled(TextInput)`
+export const Container = styled(TextInput)<Props>`
     width: 100%;
-    min-height: 56px;
-    max-height: 56px;
+    min-height: ${({height}) => height};
+    max-height: ${({height}) => height};
     padding: 14px;
+    text-align-vertical: top;
     border-radius: 6px;
-    margin-bottom: 8px;
-    border: 1px solid ${({ theme }) => theme.COLORS.GRAY_1};
-    color: ${({ theme }) => theme.COLORS.GRAY_1};
-    font-family: ${({theme}) => theme.FONT_FAMILY.REGULAR}; 
+    margin-bottom: 12px;
+    ${({theme}) => css`
+        font-size: ${theme.FONT_SIZE.MD};
+        border: ${theme.COLORS.GRAY_5};
+        color: ${theme.COLORS.GRAY_1};
+        font-family: ${theme.FONT_FAMILY.REGULAR};
+    `};
 `
