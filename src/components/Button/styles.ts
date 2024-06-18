@@ -11,17 +11,17 @@ type Props = {
 export const Container = styled(TouchableOpacity)<Props>`
     flex-direction: row;
     width: 100%;
-    padding: 16px 24px;
+    padding: 16px 16px;
     border-radius: 6px;
     background-color: ${({theme, type}) => type === 'DEFAULT' ? theme.COLORS.GRAY_2 : theme.COLORS.WHITE};
     justify-content: center;
     align-items: center;
-    gap: 12px;
 `
 
 export const Title = styled.Text<Props>` 
     color: ${({ theme, type }) => type === 'DEFAULT' ? theme.COLORS.WHITE : theme.COLORS.GRAY_2};
-    font-family: ${({theme}) => theme.FONT_FAMILY.BOLD}; 
+    font-family: ${({theme}) => theme.FONT_FAMILY.BOLD};
+    font-size: 14px;
 `;
 
 export const Icon = styled(AntDesign).attrs<Props>(({ theme, type }) => ({

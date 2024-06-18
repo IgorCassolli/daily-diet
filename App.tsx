@@ -1,8 +1,9 @@
 import { ActivityIndicator } from 'react-native';
 import { ThemeProvider } from 'styled-components';
 
+import theme from './src/theme/theme';
+
 import Home from './src/screens/Home';
-import NewMeat from './src/screens/NewMeat';
 
 import {
   useFonts,
@@ -10,7 +11,7 @@ import {
   Nunito_700Bold
 } from '@expo-google-fonts/nunito';
 
-import theme from './src/theme/theme';
+
 
 export default function App() {
 
@@ -21,7 +22,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      {fontsLoaded ? <NewMeat /> : <ActivityIndicator style={{ flex: 1 }} />}
+      {fontsLoaded ? <Home /> : <ActivityIndicator style={{ flex: 1 }} />}
     </ThemeProvider>
   )
 
