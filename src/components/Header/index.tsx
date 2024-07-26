@@ -1,6 +1,7 @@
 import {
     Container,
-    Icon,
+    ReturnButton,
+    ReturnIcon,
     Title
 } from './styles'
 
@@ -11,9 +12,10 @@ type Props = {
 export default function Header({ title }: Props) {
     return (
         <Container>
-            <Icon
+            <ReturnButton>
+                <ReturnIcon />
+            </ReturnButton>
 
-            />
             <Title>
                 {title}
             </Title>
