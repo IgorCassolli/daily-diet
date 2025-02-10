@@ -1,10 +1,10 @@
-type MeatDTO = {
+type MealDTO = {
     name: string;
     description: string;
     date: string;
     hour: string;
-    onDiet: boolean;
+    onDiet: string;
 }
 
-export { MeatDTO }
+export { MealDTO }
 

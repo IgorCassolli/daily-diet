@@ -1,6 +1,5 @@
 import styled from "styled-components/native";
 
-
 type Props = {
     label: string;
     bg: 'GREEN' | 'RED';
@@ -42,5 +41,4 @@ export const Status = styled.View<Props>`
     height: 8px;
     border-radius: 8px;
     background-color: ${({theme, bg}) => bg === 'GREEN' ? theme.COLORS.GREEN_DARK : theme.COLORS.RED_DARK};
-
 `
