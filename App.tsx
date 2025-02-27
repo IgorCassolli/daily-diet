@@ -1,9 +1,8 @@
 import { ActivityIndicator } from 'react-native';
 import { ThemeProvider } from 'styled-components';
+import { Routes } from './src/routes';
 
 import theme from './src/theme/theme';
-
-import Home from './src/screens/Home';
 
 import {
   useFonts,
@@ -22,7 +21,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      {fontsLoaded ? <Home /> : <ActivityIndicator style={{ flex: 1 }} />}
+      {fontsLoaded ? <Routes /> : <ActivityIndicator style={{ flex: 1 }} />}
     </ThemeProvider>
   )
 

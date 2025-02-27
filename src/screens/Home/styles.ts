@@ -21,6 +21,8 @@ export const Logo = styled.Image`
 export const UserPhoto = styled.Image`
     height: 40px;
     width: 40px;
+    border: 2px solid ${({theme}) => theme.COLORS.GRAY_2};
+    border-radius: 20px;
 `
 export const CardResult = styled.View`
     background-color: ${({theme}) => theme.COLORS.GREEN_LIGHT};
@@ -60,6 +62,7 @@ export const NewMeat = styled.View`
     width: 100%;
     flex-direction: column;
     gap: 4px;
+  
 `
 export const NewMeatTitle = styled.Text`
     font-size: 16px;
@@ -70,3 +73,14 @@ export const NewMeatButton = styled.View`
     width: 100%;
     border-radius: 6px;
 `
+export const MealContainerList = styled.View`
+    width: 100%;
+    margin-top: 32px;
+`
+export const MealTitleList = styled.Text`
+    color: ${({theme}) => theme.COLORS.GRAY_1};
+    font-family: ${({theme}) => theme.FONT_FAMILY.BOLD};
+    font-size: ${({theme}) => theme.FONT_SIZE.LG};
+    margin-bottom: 8px;
+`
+

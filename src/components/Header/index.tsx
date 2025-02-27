@@ -15,7 +15,6 @@ export default function Header({ title }: Props) {
             <ReturnButton>
                 <ReturnIcon />
             </ReturnButton>
-
             <Title>
                 {title}
             </Title>
