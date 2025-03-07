@@ -1,3 +1,5 @@
+
+import { useNavigation } from '@react-navigation/native';
 import {
     Container,
     ReturnButton,
@@ -10,9 +12,16 @@ type Props = {
 }
 
 export default function Header({ title }: Props) {
+
+    const navigator = useNavigation();
+
+    function handleGoBack() {
+        navigator.goBack();
+    }
+
     return (
         <Container>
-            <ReturnButton>
+            <ReturnButton onPress={handleGoBack}>
                 <ReturnIcon />
             </ReturnButton>
             <Title>
